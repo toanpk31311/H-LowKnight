@@ -18,6 +18,7 @@ public class PlayerPrimaryAtck : PlayerState
             comboCounter = 0;
         }
         player.anim.SetInteger("ComboCounter", comboCounter);
+        stateTimer = .1f;
     }
 
     public override void Exit()
@@ -28,7 +29,10 @@ public class PlayerPrimaryAtck : PlayerState
     }
 
     public override void Update()
-    {
+    {   if (stateTimer<0)
+        {
+            rb.velocity= new Vector2(0,0);
+        }
         base.Update();
         if (triggelcall)
         {
