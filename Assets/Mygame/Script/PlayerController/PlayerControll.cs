@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
+    public bool isBusy { get; private set; }
+    [Header("Attack infor")]
+    public float[] attackMovement;
+
     [Header("Move infor")]
+    
     public float moveSpeed = 2f;
     public float jumpForce = 120f;
     public float facingDr { get; private set; } = 1;
@@ -40,7 +45,7 @@ public class PlayerControll : MonoBehaviour
     public PlayerDashState DashState { get; private set; }
     public PlayerWallSlideState slideState { get; private set; }
     public PlayerWallJump wallJump {  get; private set; }   
-    public PlayerPrimaryAtck primaryAtck { get; private set; }  
+    public PlayerPrimaryAtckState primaryAtck { get; private set; }  
     #endregion
     private void Awake()
     {
@@ -52,7 +57,7 @@ public class PlayerControll : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, "Dash");
         slideState = new PlayerWallSlideState(this, StateMachine, "WallSlide");
         wallJump = new PlayerWallJump(this, StateMachine, "jump");
-        primaryAtck = new PlayerPrimaryAtck(this, StateMachine, "Atack");
+        primaryAtck = new PlayerPrimaryAtckState(this, StateMachine, "Atack");
     }
     private void Start()
     {
@@ -117,8 +122,14 @@ public class PlayerControll : MonoBehaviour
             
     }
     public void AniamationTrigger() => StateMachine.curentState.AnimationFinishTrigger();
-    
 
-    
+    public IEnumerator BusyFor(float _seconds)
+    {
+        isBusy = true;
+
+        yield return new WaitForSeconds(_seconds);
+        isBusy = false;
+    }
+
 
 }

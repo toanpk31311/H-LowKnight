@@ -454,6 +454,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4769442936610392124, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
+      propertyPath: attackMovement.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769442936610392124, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
+      propertyPath: attackMovement.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769442936610392124, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
+      propertyPath: attackMovement.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769442936610392124, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
+      propertyPath: attackMovement.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769442936610392124, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
+      propertyPath: attackMovement.Array.data[0].x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769442936610392124, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
+      propertyPath: attackMovement.Array.data[0].y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4769442936610392125, guid: 004b8fca8ca7dfe45b57da2db6545b50, type: 3}
       propertyPath: m_RootOrder
       value: 1
