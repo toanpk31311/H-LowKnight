@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrimIdleState : EnemyState
-{   GrimEnermy enemy;
-    public GrimIdleState(Enemy _enemybase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy _enemy) : base(_enemybase, _stateMachine, _animBoolName)
+public class GrimIdleState : GrimGroundState
+{   
+
+    public GrimIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
     {
-        enemy = _enemy;
     }
 
     public override void Enter()
     {
         base.Enter();
         stateTimer = enemy.idleTime;
+        
     }
 
     public override void Exit()

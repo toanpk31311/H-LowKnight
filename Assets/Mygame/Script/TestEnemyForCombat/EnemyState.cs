@@ -11,7 +11,9 @@ public class EnemyState : MonoBehaviour
     private string animBoolName;
 
     protected float stateTimer;
+    protected float SecondStateTimer;
     protected bool triggerCalled;
+    
 
     public EnemyState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName)
     {
@@ -22,6 +24,7 @@ public class EnemyState : MonoBehaviour
     public virtual void Update()
     {
         stateTimer -= Time.deltaTime;
+        
     }
 
 
@@ -43,4 +46,5 @@ public class EnemyState : MonoBehaviour
     {
         triggerCalled = true;
     }
+
 }

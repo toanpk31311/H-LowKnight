@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class GrimMoveState : EnemyState
+public class GrimMoveState : GrimGroundState
 {
-    GrimEnermy enemy;
-    public GrimMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy _enermy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public GrimMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
     {
-        this.enemy = _enermy;  
     }
 
     public override void Enter()
