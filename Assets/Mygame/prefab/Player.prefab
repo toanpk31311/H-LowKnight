@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1871245035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871245036}
+  m_Layer: 6
+  m_Name: AttackCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871245036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871245035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.48, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4769442936610392125}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4769442935686661855
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +43,7 @@ GameObject:
   - component: {fileID: 4769442935686661850}
   - component: {fileID: 4769442935686661849}
   - component: {fileID: 4769442935686661851}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4769442935734028752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4769442935734028759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -0.314, z: 0}
+  m_LocalPosition: {x: -0.11, y: 0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -159,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4769442935816176113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,9 +224,10 @@ GameObject:
   - component: {fileID: 4769442936610392124}
   - component: {fileID: 4769442936610392127}
   - component: {fileID: 4769442936610392126}
-  m_Layer: 0
+  - component: {fileID: 284623301}
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,6 +247,7 @@ Transform:
   - {fileID: 4769442935686661848}
   - {fileID: 4769442935816176113}
   - {fileID: 4769442935734028752}
+  - {fileID: 1871245036}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -230,11 +263,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b767d2fb0699b6b458e1e81db43613d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpForce: 20
-  dashCollDown: 1.5
-  dashSpeed: 20
-  dashDurarion: 0.3
   groundCheck: {fileID: 4769442935816176113}
   groundCheckDistance: 0.7
   wallCheck: {fileID: 4769442935734028752}
@@ -245,8 +273,21 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 0
-  anim: {fileID: 4769442935686661849}
-  rb: {fileID: 4769442936610392127}
+  attackCheck: {fileID: 1871245036}
+  attackCheckRadius: 1.18
+  knockbackDirection: {x: 0, y: 0}
+  knockbackPower: {x: 7, y: 12}
+  knockbackOffset: {x: 0.5, y: 2}
+  knockbackDuration: 0.07
+  attackMovement:
+  - 1
+  - 1
+  - 3
+  moveSpeed: 10
+  jumpForce: 15
+  dashCollDown: 1.5
+  dashSpeed: 20
+  dashDurarion: 0.3
 --- !u!50 &4769442936610392127
 Rigidbody2D:
   serializedVersion: 4
@@ -284,3 +325,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.45449603, y: -0.33329698}
   m_Size: {x: 1.1261945, y: 2.1159854}
   m_Direction: 0
+--- !u!114 &284623301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769442936610392115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa776655e752474289053839090df9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.24
+  hitMat: {fileID: 2100000, guid: 12e7781dd2b2b5b4da2c569e7314980d, type: 2}

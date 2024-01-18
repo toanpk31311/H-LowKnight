@@ -40,6 +40,9 @@ public class PlayerWallSlideState : PlayerState
         {
             stateMachine.ChangeState(player.PlayerIdleState);
         }
+        if (!player.isWallDetected()) {
+            stateMachine.ChangeState(player.PlayerIdleState);
+        }
         if(Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.ChangeState(player.wallJump);
