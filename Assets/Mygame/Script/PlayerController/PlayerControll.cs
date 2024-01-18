@@ -7,7 +7,7 @@ public class PlayerControll : Entity
     public bool isBusy { get; private set; }
     [Header("Attack infor")]
     public float[] attackMovement;
-
+   
     [Header("Move infor")]
     
     public float moveSpeed = 2f;

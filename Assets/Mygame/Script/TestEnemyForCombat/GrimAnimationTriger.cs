@@ -10,4 +10,15 @@ public class GrimAnimationTriger : MonoBehaviour
     {
         enemy.AnimationFinishTrigger();
     }
+    private void AttackTrigger()
+    {
+        Collider2D[] coliders = Physics2D.OverlapCircleAll(enemy.attackCheck.position, enemy.attackCheckRadius);
+        foreach (var hit in coliders)
+        {
+            if (hit.GetComponent<PlayerControll>() != null)
+            {
+                hit.GetComponent<PlayerControll>().Damage();
+            }
+        }
+    }
 }

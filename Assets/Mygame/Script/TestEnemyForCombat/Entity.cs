@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
     protected bool rightFlip = true;
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
+    public EntityFx fx { get; private set; }
 
 
     [Header("colision infor")]
@@ -17,6 +18,8 @@ public class Entity : MonoBehaviour
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatISGround;
     [SerializeField] protected LayerMask whatIsWall;
+    public Transform attackCheck;
+    public float attackCheckRadius;
 
     protected virtual void Awake()
     {
@@ -27,6 +30,7 @@ public class Entity : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
        
         anim = GetComponentInChildren<Animator>();
+        fx=GetComponent<EntityFx>();
     }
     protected virtual void Update()
     {
@@ -40,6 +44,7 @@ public class Entity : MonoBehaviour
     {
         Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
+        Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
     }
     public void Flip()
     {
@@ -63,5 +68,10 @@ public class Entity : MonoBehaviour
     {
         rb.velocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
+    }
+    public virtual void Damage()
+    {
+        Debug.Log("outch");
+        fx.StartCoroutine("FlashFX");
     }
 }

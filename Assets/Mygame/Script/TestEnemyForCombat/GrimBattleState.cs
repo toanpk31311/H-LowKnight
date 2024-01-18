@@ -37,7 +37,7 @@ public class GrimBattleState : EnemyState
             {   
                     if (CanAttack())
                    stateMachine.ChangeState(enemy.attackState);
-                 
+                    
             }
 
         }
