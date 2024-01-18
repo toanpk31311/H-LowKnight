@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrimAtckState : GrimGroundState
+public class GrimAtckState : EnemyState
 {
     GrimEnermy enemy;
-    public GrimAtckState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
+    public GrimAtckState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-        this.enemy= enemy;
+        this.enemy = enemy;
     }
 
     public override void Enter()
@@ -18,6 +18,7 @@ public class GrimAtckState : GrimGroundState
     public override void Exit()
     {
         base.Exit();
+        enemy.lastTimeAttacked = Time.time;
     }
 
     public override void Update()
@@ -29,4 +30,5 @@ public class GrimAtckState : GrimGroundState
             stateMachine.ChangeState(enemy.battleState);
         }
     }
+    
 }

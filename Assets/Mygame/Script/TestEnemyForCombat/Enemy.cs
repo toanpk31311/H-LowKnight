@@ -11,8 +11,18 @@ public class Enemy : Entity
     public float BatleStateTimer = 1.2f;
     public float battleTime = 7;
     private float defaultMoveSpeed;
+
+
     [Header("Atck info")]
     public float attackDistance = 2;
+    public float agroDistance = 2;
+    public float attackCooldown;
+    public float minAttackCooldown = 1;
+    public float maxAttackCooldown = 2;
+    [HideInInspector] public float lastTimeAttacked;
+
+
+
     public EnemyStateMachine stateMachine { get; private set; }
     private PlayerControll player;
     public string lastAnimBoolName { get; private set; }

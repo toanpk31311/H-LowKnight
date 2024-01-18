@@ -5,6 +5,7 @@ using UnityEngine;
 public class GrimGroundState : EnemyState
 {
     protected GrimEnermy enemy;
+    protected Transform player;
     public GrimGroundState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
         this.enemy = enemy;
@@ -14,6 +15,7 @@ public class GrimGroundState : EnemyState
     {
        
         base.Enter();
+        player = GameObject.Find("Player").transform;
         
     }
 
@@ -26,6 +28,7 @@ public class GrimGroundState : EnemyState
     {
         base.Update();
         if (enemy.IsPlayerDetected()) {
+            Debug.Log("Cos y nghia");
             stateMachine.ChangeState(enemy.battleState);
             
         }
