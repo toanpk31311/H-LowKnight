@@ -9,6 +9,7 @@ public class GrimEnermy : Enemy
     public GrimMoveState moveState { get; private set; }
     public GrimBattleState battleState { get; private set; }
     public GrimAtckState attackState { get; private set; }
+    public GrimStunState stunState { get; private set; }    
 
 
     #endregion
@@ -21,6 +22,7 @@ public class GrimEnermy : Enemy
         //battleState = new GrimBattleState(this, stateMachine, "BatleState", this);
         battleState = new GrimBattleState(this, stateMachine, "Move", this);
         attackState = new GrimAtckState(this, stateMachine, "Attack", this);
+        stunState = new GrimStunState(this, stateMachine, "Stun", this);
     }
 
 
@@ -33,6 +35,19 @@ public class GrimEnermy : Enemy
     protected override void Update()
     {
         base.Update();
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            stateMachine.ChangeState(stunState);
+        }
+    }
+    public override bool CanBeStunned()
+    {
+       if(base.canBeStunned)
+        {
+            stateMachine.ChangeState(stunState);
+            return true;
+        }
+       return false;
     }
 
 }

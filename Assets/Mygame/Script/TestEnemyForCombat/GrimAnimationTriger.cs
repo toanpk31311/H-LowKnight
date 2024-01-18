@@ -21,4 +21,11 @@ public class GrimAnimationTriger : MonoBehaviour
             }
         }
     }
+
+
+
+
+    protected void OpenCouterAttackWindow()=> enemy.OpenCounterAttackWindow();
+    protected void ClosCounterAttackWindow()=> enemy.CloseCounterAttackWindow();
+
 }

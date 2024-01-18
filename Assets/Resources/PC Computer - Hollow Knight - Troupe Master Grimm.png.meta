@@ -800,6 +800,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_32
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 524
+        width: 215
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4172c72fe7d8b2740879a7f02129ecc1
+      internalID: 1487344920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -837,6 +858,7 @@ TextureImporter:
       PC Computer - Hollow Knight - Troupe Master Grimm_3: -957064511
       PC Computer - Hollow Knight - Troupe Master Grimm_30: -541075755
       PC Computer - Hollow Knight - Troupe Master Grimm_31: -30733636
+      PC Computer - Hollow Knight - Troupe Master Grimm_32: 1487344920
       PC Computer - Hollow Knight - Troupe Master Grimm_4: -1785495849
       PC Computer - Hollow Knight - Troupe Master Grimm_5: -322901258
       PC Computer - Hollow Knight - Troupe Master Grimm_6: 1954534457
