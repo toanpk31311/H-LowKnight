@@ -13,8 +13,8 @@ public class GrimStunState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateTimer = enemy.stunDuration;
         enemy.fx.InvokeRepeating("RedColorBlink", 0, .1f);
+        stateTimer = enemy.stunDuration;
         rb.velocity = new Vector2(-enemy.facingDr * enemy.stunDirection.x, enemy.stunDirection.y);
     }
 

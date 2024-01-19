@@ -67,6 +67,7 @@ public class Enemy : Entity
 
         return false;
     }
+    public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
     public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDr, 50, WhatIsPlayer);//
     protected override void OnDrawGizmos()
     {
@@ -75,5 +76,5 @@ public class Enemy : Entity
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDr, transform.position.y));
     }
-    public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+    
 }

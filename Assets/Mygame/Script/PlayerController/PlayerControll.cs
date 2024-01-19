@@ -49,6 +49,7 @@ public class PlayerControll : Entity
         wallJump = new PlayerWallJump(this, StateMachine, "jump");
         primaryAtck = new PlayerPrimaryAtckState(this, StateMachine, "Atack");
         CounterAttack = new PlayerCounterAttack(this, StateMachine, "CounterAttack");
+
     }
     protected override void Start()
     {

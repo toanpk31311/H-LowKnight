@@ -34,7 +34,7 @@ public class GrimEnermy : Enemy
 
     protected override void Update()
     {
-        base.Update();
+        base.Update();  
         if (Input.GetKeyDown(KeyCode.U))
         {
             stateMachine.ChangeState(stunState);
@@ -42,7 +42,7 @@ public class GrimEnermy : Enemy
     }
     public override bool CanBeStunned()
     {
-       if(base.canBeStunned)
+       if(base.CanBeStunned())
         {
             stateMachine.ChangeState(stunState);
             return true;

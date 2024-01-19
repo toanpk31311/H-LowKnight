@@ -14,12 +14,10 @@ public class PlayerCounterAttack : PlayerState
         stateTimer = player.counterAttackDuration;
         player.anim.SetBool("SuccessCounterAttack", false);
     }
-
     public override void Exit()
     {
         base.Exit();
     }
-
     public override void Update()
     {
         player.SetZeroVelocity();
@@ -31,7 +29,7 @@ public class PlayerCounterAttack : PlayerState
             if (hit.GetComponent<Enemy>() != null)
             {
                 if(hit.GetComponent<Enemy>().CanBeStunned())
-                {
+                {   
 
                     stateTimer = 10;
                     player.anim.SetBool("SuccessCounterAttack", true);
