@@ -1,0 +1,615 @@
+fileFormatVersion: 2
+guid: 461f44203ac0280498a23a043ad97bf8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fly0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1600
+        width: 160
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -500}
+        - {x: 393.5, y: 0}
+        - {x: 0, y: 500}
+        - {x: -393.5, y: 0}
+      physicsShape:
+      - - {x: 0, y: -500}
+        - {x: 393.5, y: 0}
+        - {x: 0, y: 500}
+        - {x: -393.5, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ceb2977a01526448c937e28ee0495e
+      internalID: -1670367168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fly1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1600
+        width: 160
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea150372d045554e99f6c7311aa4cd6
+      internalID: 4568889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fly2
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1600
+        width: 160
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5dce8ae8be447a4ca901e5030888228
+      internalID: -154719900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fly3
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1600
+        width: 160
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fe5a929274fbb4aa81ebe678b5e32a
+      internalID: 1129492925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Turn0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1380
+        width: 160
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5deaabcf7385424d8d49305f7326d8c
+      internalID: -1442753930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Turn1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1382
+        width: 160
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8777a48ef7ada9d4181a81e50ce08a26
+      internalID: 706240050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1108
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98aced9f1fafcd4e8d9f884667bcb9d
+      internalID: -113189818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1108
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287c817bbc3f73443893e4126a96a57a
+      internalID: 489775648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1108
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf153703a2dacc6408eb1d70d66bc0bb
+      internalID: -955077317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1108
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebf05d814c51794584b6a3832c2594e
+      internalID: -161988818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 854
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90805adfb7bb2c848a42d530d5e4757a
+      internalID: 776650075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 854
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ccd8d87594fb34abd31dd899931e3c
+      internalID: -590263269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 854
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7b8727db526d846bfd2f44f0ebce40
+      internalID: 634335949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Fire7
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 854
+        width: 190
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5732eff58797c4ea89acd6fc80df35
+      internalID: 1336249790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_DeathA0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 668
+        width: 150
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0cdc6ec65dedb46a92a8ee83ce6cf6
+      internalID: -1747590808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_DeathL0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 446
+        width: 214
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4b5c5e63493b74e85a2e31cc7ab3be
+      internalID: -791342595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Death1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 446
+        width: 214
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bde286d8d65ef44f9f07ca4df3ee6d0
+      internalID: -1976854639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_DeathL2
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 446
+        width: 214
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6ad17edb65820439f329f2274789c9
+      internalID: -353477660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_DeathL3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 242
+        width: 214
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbedda9bbbb3864eb29431ca9cb67d2
+      internalID: 1787434030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Burst0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 184
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efb8c1a41989a449b40b3a69ef5270b
+      internalID: -1556043510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Burst1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 4
+        width: 184
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e089c194414ad4980090da6f2ca1f0
+      internalID: -1535888557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemaleFlyBug_Burst2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 4
+        width: 184
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f93a77d3a593a43830ae8cac964266
+      internalID: -779276300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FemaleFlyBug_Burst0: -1556043510
+      FemaleFlyBug_Burst1: -1535888557
+      FemaleFlyBug_Burst2: -779276300
+      FemaleFlyBug_Death1: -1976854639
+      FemaleFlyBug_DeathA0: -1747590808
+      FemaleFlyBug_DeathL0: -791342595
+      FemaleFlyBug_DeathL2: -353477660
+      FemaleFlyBug_DeathL3: 1787434030
+      FemaleFlyBug_Fire0: -113189818
+      FemaleFlyBug_Fire1: -955077317
+      FemaleFlyBug_Fire2: 489775648
+      FemaleFlyBug_Fire3: -161988818
+      FemaleFlyBug_Fire4: 776650075
+      FemaleFlyBug_Fire5: -590263269
+      FemaleFlyBug_Fire6: 634335949
+      FemaleFlyBug_Fire7: 1336249790
+      FemaleFlyBug_Fly0: -1670367168
+      FemaleFlyBug_Fly1: 4568889
+      FemaleFlyBug_Fly2: -154719900
+      FemaleFlyBug_Fly3: 1129492925
+      FemaleFlyBug_Turn0: -1442753930
+      FemaleFlyBug_Turn1: 706240050
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
