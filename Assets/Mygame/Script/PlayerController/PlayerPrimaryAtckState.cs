@@ -7,7 +7,7 @@ public class PlayerPrimaryAtckState : PlayerState
     private int comboCounter;
     private float lastTimeAttacked;
     private float comboWindow=2;
-    public PlayerPrimaryAtckState(PlayerControll _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
+    public PlayerPrimaryAtckState(Player _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
     {
     }
 

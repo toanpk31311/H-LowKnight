@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EntityFx : MonoBehaviour
 {
-    protected PlayerControll player;
+    protected Player player;
     protected SpriteRenderer sr;
 
     [Header("Flash FX")]

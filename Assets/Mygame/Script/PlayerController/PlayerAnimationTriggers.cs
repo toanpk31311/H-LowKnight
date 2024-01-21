@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimationTriggers : MonoBehaviour
 {
-  private PlayerControll player => gameObject.GetComponentInParent<PlayerControll>();
+  private Player player => gameObject.GetComponentInParent<Player>();
 
    private void AnimationTrigger() 
     {
@@ -15,11 +15,15 @@ public class PlayerAnimationTriggers : MonoBehaviour
         Collider2D[] coliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
         foreach(var hit in coliders)
         {
-            if (hit.GetComponent<Enemy>()!= null)
+            if (hit.GetComponent<GroundOnlyEnemy>()!= null)
             {
-                hit.GetComponent<Enemy>().Damage();
+                hit.GetComponent<GroundOnlyEnemy>().Damage();
             }
         }
             
+    }
+    private void ThrowSword()
+    {
+        SkillManager.instance.Sword.CreateSword();
     }
 }

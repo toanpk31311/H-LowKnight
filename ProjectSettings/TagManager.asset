@@ -13,7 +13,7 @@ TagManager:
   - UI
   - WhatIsPlayer
   - WhatIsEnermy
-  - 
+  - Sword
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
     locked: 0
   - name: Enermy
     uniqueID: 2529124541
+    locked: 0
+  - name: Player
+    uniqueID: 4051457657
+    locked: 0
+  - name: Ground
+    uniqueID: 205776569
     locked: 0

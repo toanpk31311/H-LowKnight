@@ -15,9 +15,9 @@ public class GrimAnimationTriger : MonoBehaviour
         Collider2D[] coliders = Physics2D.OverlapCircleAll(enemy.attackCheck.position, enemy.attackCheckRadius);
         foreach (var hit in coliders)
         {
-            if (hit.GetComponent<PlayerControll>() != null)
+            if (hit.GetComponent<Player>() != null)
             {
-                hit.GetComponent<PlayerControll>().Damage();
+                hit.GetComponent<Player>().Damage();
             }
         }
     }

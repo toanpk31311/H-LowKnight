@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrimStunState : EnemyState
 {
     GrimEnermy enemy;
-    public GrimStunState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public GrimStunState(GroundOnlyEnemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
         this.enemy= enemy;
     }

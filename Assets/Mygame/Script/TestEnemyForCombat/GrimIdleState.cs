@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrimIdleState : GrimGroundState
 {   
 
-    public GrimIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
+    public GrimIdleState(GroundOnlyEnemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
     {
     }
 

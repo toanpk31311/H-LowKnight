@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerState
 {
-    public PlayerDashState(PlayerControll _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
+    public PlayerDashState(Player _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
+      player.Skill.clone.CreateClone(player.transform);
         stateTimer = player.dashDurarion;
     }
 

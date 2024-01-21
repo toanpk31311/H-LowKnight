@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerWallJump : PlayerState
 {
-    public PlayerWallJump(PlayerControll _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
+    public PlayerWallJump(Player _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
     {
     }
 

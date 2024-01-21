@@ -7,7 +7,7 @@ public class GrimBattleState : EnemyState
     private Transform player;
     GrimEnermy enemy;
     private int moveDir;
-    public GrimBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public GrimBattleState(GroundOnlyEnemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName,GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
         this.enemy= enemy;
     }
@@ -16,8 +16,8 @@ public class GrimBattleState : EnemyState
     {
       
         base.Enter();
-        
-        player = GameObject.Find("Player").transform;
+
+        player = PlayerManager.instance.player.transform;
     }
 
     public override void Exit()

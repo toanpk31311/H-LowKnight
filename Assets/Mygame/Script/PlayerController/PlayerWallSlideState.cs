@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerWallSlideState : PlayerState
 {
     // Start is called before the first frame update
-    public PlayerWallSlideState(PlayerControll _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
+    public PlayerWallSlideState(Player _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
     {
     }
 

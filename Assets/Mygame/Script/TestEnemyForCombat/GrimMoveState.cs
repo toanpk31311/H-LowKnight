@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GrimMoveState : GrimGroundState
 {
-    public GrimMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
+    public GrimMoveState(GroundOnlyEnemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, GrimEnermy enemy) : base(_enemyBase, _stateMachine, _animBoolName, enemy)
     {
     }
 

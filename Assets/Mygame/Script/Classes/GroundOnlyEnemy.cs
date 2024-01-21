@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity
+public class GroundOnlyEnemy : Entity
 {
     [SerializeField]protected LayerMask WhatIsPlayer;
     [Header("Move info")]
@@ -29,7 +29,7 @@ public class Enemy : Entity
 
 
     public EnemyStateMachine stateMachine { get; private set; }
-    private PlayerControll player;
+    private Player player;
     public string lastAnimBoolName { get; private set; }
     protected override  void Awake()
     {

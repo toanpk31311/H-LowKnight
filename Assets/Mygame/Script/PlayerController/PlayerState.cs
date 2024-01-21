@@ -8,12 +8,12 @@ public class PlayerState
     protected float xInput;
     protected float yInput;
     protected PlayerStateMachine stateMachine;
-    protected PlayerControll player;
+    protected Player player;
     private string animBoolName;
     protected float stateTimer;
     protected bool triggelcall;
 
-    public PlayerState(PlayerControll _player, PlayerStateMachine _PlayerSM,string animBoolName)
+    public PlayerState(Player _player, PlayerStateMachine _PlayerSM,string animBoolName)
     {
         this.player= _player;
         this.animBoolName= animBoolName;

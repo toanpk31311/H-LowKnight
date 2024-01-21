@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCounterAttack : PlayerState
 {
-    public PlayerCounterAttack(PlayerControll _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
+    public PlayerCounterAttack(Player _player, PlayerStateMachine _PlayerSM, string animBoolName) : base(_player, _PlayerSM, animBoolName)
     {
     }
 
@@ -26,9 +26,9 @@ public class PlayerCounterAttack : PlayerState
 
         foreach (var hit in colliders)
         {
-            if (hit.GetComponent<Enemy>() != null)
+            if (hit.GetComponent<GroundOnlyEnemy>() != null)
             {
-                if(hit.GetComponent<Enemy>().CanBeStunned())
+                if(hit.GetComponent<GroundOnlyEnemy>().CanBeStunned())
                 {   
 
                     stateTimer = 10;

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -86,7 +85,6 @@ public class Entity : MonoBehaviour
     }
     public virtual void Damage()
     {
-        Debug.Log("outch");
         fx.StartCoroutine("FlashFX");
         StartCoroutine("HitKnockBack");
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControll : Entity    
+public class Player : Entity    
 {
     public bool isBusy { get; private set; }
     [Header("Attack infor")]
@@ -17,7 +17,6 @@ public class PlayerControll : Entity
     
     [Header("Dash Infor")]
     [SerializeField] private float dashCollDown;
-    private float usedashTimer;
     public float dashSpeed;
     public float dashDurarion;
     public float dashDir {  get; private set; }  
@@ -36,6 +35,11 @@ public class PlayerControll : Entity
     public PlayerPrimaryAtckState primaryAtck { get; private set; }
 
     public PlayerCounterAttack CounterAttack { get; private set; }
+    public SkillManager Skill {  get; private set; }
+    public PlayerAimState AimState { get; private set; }
+    public PlayerCatchSwordState catchSword { get; private set; }
+    public GameObject sword;
+    //{ get; private set; }
     #endregion
     protected override void Awake()
     {   base.Awake();
@@ -49,12 +53,14 @@ public class PlayerControll : Entity
         wallJump = new PlayerWallJump(this, StateMachine, "jump");
         primaryAtck = new PlayerPrimaryAtckState(this, StateMachine, "Atack");
         CounterAttack = new PlayerCounterAttack(this, StateMachine, "CounterAttack");
-
+        AimState = new PlayerAimState(this, StateMachine, "AimSword");
+        catchSword= new PlayerCatchSwordState(this, StateMachine, "CatchSword");
     }
     protected override void Start()
     {
         base.Start();
         StateMachine.Initialize(PlayerIdleState);
+        Skill = SkillManager.instance;
     }
     protected override void Update()
     {
@@ -62,20 +68,17 @@ public class PlayerControll : Entity
         StateMachine.curentState.Update();
         CheckForDashInput();
     }
-   
-
-    
-    
+  
     private void CheckForDashInput()
     {   
-        usedashTimer-= Time.deltaTime;
+        //usedashTimer-= Time.deltaTime;
         if (isWallDetected())
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && usedashTimer < 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.instance.dash.CanUseSkill())// usedashTimer < 0
         {
-            usedashTimer = dashCollDown;
+            //usedashTimer = dashCollDown;
             dashDir = Input.GetAxisRaw("Horizontal");
             if(dashDir==0)
             {
@@ -93,6 +96,15 @@ public class PlayerControll : Entity
 
         yield return new WaitForSeconds(_seconds);
         isBusy = false;
+    }
+    public void AssignNewSword(GameObject _newSword)
+    {
+        sword = _newSword;
+    }
+public void ClearTheSword()
+    {
+       
+       Destroy(sword);
     }
 
 

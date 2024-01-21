@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrimEnermy : Enemy
+public class GrimEnermy : GroundOnlyEnemy
 {
     #region States
     public GrimIdleState idleState { get; private set; }
@@ -35,10 +35,10 @@ public class GrimEnermy : Enemy
     protected override void Update()
     {
         base.Update();  
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            stateMachine.ChangeState(stunState);
-        }
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    stateMachine.ChangeState(stunState);
+        //}
     }
     public override bool CanBeStunned()
     {

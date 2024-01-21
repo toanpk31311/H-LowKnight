@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyState : MonoBehaviour
 {
     protected EnemyStateMachine stateMachine;
-    protected Enemy enemyBase;
+    protected GroundOnlyEnemy enemyBase;
     protected Rigidbody2D rb;
 
     private string animBoolName;
@@ -15,7 +15,7 @@ public class EnemyState : MonoBehaviour
     protected bool triggerCalled;
     
 
-    public EnemyState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName)
+    public EnemyState(GroundOnlyEnemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName)
     {
         this.enemyBase = _enemyBase;
         this.stateMachine = _stateMachine;
