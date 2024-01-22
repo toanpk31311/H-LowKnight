@@ -16,6 +16,18 @@ public class SwordSkillController : MonoBehaviour
 
     private float freezeTimeDuration;
     private float returnSpeed = 12;
+
+    [Header("Bounce info")]
+    [SerializeField] public float bounceSpeed = 20;
+    private bool isBouncing;
+    private int bounceAmount = 4;
+    private List<Transform> enemyTarget;
+    private int targetIndex;
+
+    [Header("Pierce info")]
+    private float pierceAmount;
+
+
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
@@ -27,12 +39,16 @@ public class SwordSkillController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public  void SetUpSword(Vector2 _dir ,float _gravityScale,Player _player)
+    public void SetUpSword(Vector2 _dir, float _gravityScale, Player _player)
     {
         player = _player;
         rb.velocity = _dir;
         rb.gravityScale = _gravityScale;
-        anim.SetBool("Rotation", true);
+        if (pierceAmount <= 0)
+        {
+            anim.SetBool("Rotation", true);
+        }
+       
     }
     private void Update()
     {
@@ -43,32 +59,91 @@ public class SwordSkillController : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, returnSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, player.transform.position) < 1)
-                player.ClearTheSword();
+                player.CatchTheSword();
+        }
+        BounceLogic();
+
+    }
+
+    private void BounceLogic()
+    {
+        if (isBouncing && enemyTarget.Count > 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, enemyTarget[targetIndex].position, bounceSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, enemyTarget[targetIndex].position) < .1f)
+            {
+                targetIndex++;
+                bounceAmount--;
+                if (bounceAmount <= 0)
+                {
+                    isBouncing = false;
+                    isReturning = true;
+                }
+
+                if (targetIndex >= enemyTarget.Count)
+                    targetIndex = 0;
+            }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        anim.SetBool("Rotation", false);
+
+        if (isReturning)
+            return;
+        SetupTargetsForBounce(collision);
+        StuckInto(collision);
+
+    }
+    public void SetupBounce(bool _isBouncing, int _amountOfBounces)
+    {
+        isBouncing = _isBouncing;
+        bounceAmount = _amountOfBounces;
+        //bounceSpeed = _bounceSpeed;
+
+
+        enemyTarget = new List<Transform>();
+    }
+
+    private void SetupTargetsForBounce(Collider2D collision)
+    {
+        if (collision.GetComponent<GroundOnlyEnemy>() != null)
+        {
+
+            if (isBouncing && enemyTarget.Count <= 0)
+            {
+                Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 10);
+                foreach (var hit in collider)
+                {
+                    if (hit.GetComponent<GroundOnlyEnemy>() != null)
+                    {
+                        enemyTarget.Add(hit.transform);
+                    }
+                }
+            }
+
+        }
+    }
+
+    private void StuckInto(Collider2D collision)
+    {
+        if (pierceAmount > 0 && collision.GetComponent<GroundOnlyEnemy>() != null)
+        {
+            pierceAmount--;
+            return;
+        }
+
         cd.enabled = false;
         canRotate = false;
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        transform.parent= collision.transform;
-        if (isReturning)
-            return;
+        if (isBouncing && enemyTarget.Count > 0) { return; }
+        
 
-
-    //    if (collision.GetComponent<GroundOnlyEnemy>() != null)
-    //    {
-    //        GroundOnlyEnemy enemy = collision.GetComponent<GroundOnlyEnemy>();
-    //        //SwordSkillDamage(enemy);
-    //    }
-
-
-    //    //SetupTargetsForBounce(collision);
-
-    //    //StuckInto(collision);
+        anim.SetBool("Rotation", false);
+        transform.parent = collision.transform;
     }
+
     public void ReturnSword()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -78,5 +153,9 @@ public class SwordSkillController : MonoBehaviour
 
 
         // sword.skill.setcooldown;
+    }
+    public void SetupPierce(int _pierceAmount)
+    {
+        pierceAmount = _pierceAmount;
     }
 }

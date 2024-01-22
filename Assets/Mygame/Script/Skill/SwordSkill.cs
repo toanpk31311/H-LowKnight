@@ -1,17 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class SwordSkill : Skill
 {
+    public SwordType swordType = SwordType.Regular;
+    [Header("Bounce info")]
+    //[SerializeField] private UI_SkillTreeSlot bounceUnlockButton;
+    [SerializeField] private int   bounceAmount;
+    [SerializeField] private float bounceGravity;
+    [SerializeField] private float bounceSpeed;
+    [Header("Peirce info")]
+    //[SerializeField] private UI_SkillTreeSlot pierceUnlockButton;
+    [SerializeField] private int   pierceAmount;
+    [SerializeField] private float pierceGravity;
     [Header("Skill info")]
 
     [SerializeField] private GameObject swordPrefab;
-    [SerializeField] private Vector2 launchForce;
-    [SerializeField] private float swordGravity;
-    [SerializeField] private float freezeTimeDuration;
-    [SerializeField] private float returnSpeed;
+    [SerializeField] private Vector2    launchForce;
+    [SerializeField] private float      swordGravity;
+    [SerializeField] private float      freezeTimeDuration;
+    [SerializeField] private float      returnSpeed;
     private Vector2 finalDr;
 
     [Header("Aim dots")]
@@ -21,33 +28,53 @@ public class SwordSkill : Skill
     [SerializeField] private Transform dotsParent;
     private GameObject[] dots;
     public bool swordUnlocked { get; private set; }
+    public enum SwordType
+    {
+        Regular,
+        Bounce,
+        Pierce,
+        Spin
+    }
+    
     protected override void Start()
     {
         base.Start();
 
         GenerateDots();
     }
-        public void CreateSword()
-    {   
-
+    public void CreateSword()
+    { 
+        
         GameObject newSword = Instantiate(swordPrefab, player.transform.position, transform.rotation);
         SwordSkillController newSwordScript = newSword.GetComponent<SwordSkillController>();
-        newSwordScript.SetUpSword(finalDr, swordGravity,player);
+
+        if (swordType == SwordType.Bounce)
+        {           
+            newSwordScript.SetupBounce(true, bounceAmount);   
+        }
+        else if (swordType == SwordType.Pierce)
+        {
+            newSwordScript.SetupPierce(pierceAmount);
+        }
+            newSwordScript.SetUpSword(finalDr, swordGravity, player);
         player.AssignNewSword(newSword);
         DotsActive(false);
     }
-    public Vector2 AimDr()
+    private void SetupGraivty()
     {
-        Vector2 playerPos= player.transform.position;
-        Vector2 mosePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mosePos - playerPos;
-        return direction;
+        if (swordType == SwordType.Bounce)
+            swordGravity = bounceGravity;
+        else if (swordType == SwordType.Pierce)
+            swordGravity = pierceGravity;
+        //else if (swordType == SwordType.Spin) 
+            //swordGravity = spinGravity;
     }
     protected override void Update()
     {
-        if(Input.GetKeyUp(KeyCode.R)) {
+        if (Input.GetKeyUp(KeyCode.R))
+        {
             finalDr = new Vector2(AimDr().normalized.x * launchForce.x, AimDr().normalized.y * launchForce.y);
-            
+
         }
         if (Input.GetKey(KeyCode.R))
         {
@@ -56,6 +83,14 @@ public class SwordSkill : Skill
                 dots[i].transform.position = DotsPosition(i * spaceBeetwenDots);
             }
         }
+    }
+    #region Aimming
+    public Vector2 AimDr()
+    {
+        Vector2 playerPos = player.transform.position;
+        Vector2 mosePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = mosePos - playerPos;
+        return direction;
     }
     private void GenerateDots()
     {
@@ -81,7 +116,7 @@ public class SwordSkill : Skill
 
         return position;
     }
- 
+
     public Vector2 AimDirection()
     {
         Vector2 playerPosition = player.transform.position;
@@ -90,5 +125,5 @@ public class SwordSkill : Skill
 
         return direction;
     }
-
+    #endregion
 }

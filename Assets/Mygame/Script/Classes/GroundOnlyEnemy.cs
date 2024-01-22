@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundOnlyEnemy : Entity
-{
+{   
     [SerializeField]protected LayerMask WhatIsPlayer;
     [Header("Move info")]
     public float moveSpeed = 1.5f;

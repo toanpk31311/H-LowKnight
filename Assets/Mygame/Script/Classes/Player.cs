@@ -8,7 +8,7 @@ public class Player : Entity
     [Header("Attack infor")]
     public float[] attackMovement;
     public float counterAttackDuration = .2f;
-
+    public float swordReturnImpact;
 
     [Header("Move infor")]
     
@@ -101,9 +101,9 @@ public class Player : Entity
     {
         sword = _newSword;
     }
-public void ClearTheSword()
+public void CatchTheSword()
     {
-       
+        StateMachine.ChangeState(catchSword);
        Destroy(sword);
     }
 
