@@ -1,0 +1,851 @@
+fileFormatVersion: 2
+guid: ca335f1ad77ea9a47a20f290380ac3b5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bdd54a5077f6c499daafdad62ce563
+      internalID: -834010427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf7aae8a4120094f9c095a49a53f33b
+      internalID: 303157617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_2
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f078576034845ab4faa13e6c7169853e
+      internalID: 2141929844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_3
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ab607d25f01bb45999785d28451bdc
+      internalID: -957064511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_4
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6046a03a9043c74a997c73c8b1718a3
+      internalID: -1785495849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_5
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28912f31860a3b45a0a93f7a7444585
+      internalID: -322901258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_6
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c2862a9e38a0b48ad44a3602c075aa
+      internalID: 1954534457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_7
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ac9f19870d886498df6936f124d03b
+      internalID: -1947404194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_8
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd7e6c04787bf44885e0f069357f358
+      internalID: 255654587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_9
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6fe323a1d389b498d5553351667abe
+      internalID: 7099459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_10
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ad731337344db4db8fea415541e34a
+      internalID: -1404598583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_11
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 9022
+        width: 177
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3df3ad2bc20384691bb9b9f01abda2
+      internalID: 67228328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_12
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 8639
+        width: 249
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79b1184d2378b4479c65a58070584f9
+      internalID: 2073961383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_13
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 8583
+        width: 232
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4357d947211cd3e4cbe2033b6dcc43eb
+      internalID: 1775083852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_14
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 8664
+        width: 373
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4177d493bf88fb4ba6848ca8d039e5a
+      internalID: 1904281904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_15
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 8665
+        width: 365
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d621549bcf282e4e9e35727491f897a
+      internalID: 1228226457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_16
+      rect:
+        serializedVersion: 2
+        x: 2845
+        y: 8668
+        width: 368
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950150f6c4477da439125f1013768a60
+      internalID: -972109729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_17
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 6842
+        width: 605
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54cac4e0b3c33044a5ffb428b36a5cc
+      internalID: 864548261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_18
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 6823
+        width: 516
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8be75d36aacf84abf23e1a75ef1d3a
+      internalID: 1974387060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6458
+        width: 618
+        height: 331
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3904725827f93004d9295f7ab078a87f
+      internalID: 1586690599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_20
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 6424
+        width: 458
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ba51baa9a47664c8f8b69c8a8696e2
+      internalID: -1412469441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_21
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4282
+        width: 394
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bd9fc87c6c8b7428a2a0fea382cf85
+      internalID: -1017555645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_22
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 4287
+        width: 371
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ea0715e9ebbf44f8f70b5f09408a0c
+      internalID: 1165581090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_23
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 4280
+        width: 391
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d65fc475b5c124f8ea2df4b48b80aa
+      internalID: 464329192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_24
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 4280
+        width: 398
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2695d756f57194884e5f92bbee7dfc
+      internalID: 586775270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_25
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 5786
+        width: 267
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c1cc3baae50694f9b849b7ac1a8bfb
+      internalID: 2110374325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_26
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 5780
+        width: 273
+        height: 606
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a1c230b8751404ea5496f4c020f23b
+      internalID: -1738207424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_27
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6822
+        width: 255
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e05654169d6c949bbe3229759b569e
+      internalID: 1587149819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_28
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 6826
+        width: 260
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4888fb872994d49aaa206f08bf9681
+      internalID: -13335651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_29
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 6826
+        width: 253
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16e58de35fb50f4ba57658171b4df0a
+      internalID: 1174017244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_30
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 6826
+        width: 260
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abb7c5aafe73184c85c87d4b5e92776
+      internalID: -541075755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Hollow Knight - Troupe Master Grimm_31
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 4619
+        width: 251
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4de8b194fda1bd4da60520b690c03d6
+      internalID: -30733636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Hollow Knight - Troupe Master Grimm_0: -834010427
+      PC Computer - Hollow Knight - Troupe Master Grimm_1: 303157617
+      PC Computer - Hollow Knight - Troupe Master Grimm_10: -1404598583
+      PC Computer - Hollow Knight - Troupe Master Grimm_11: 67228328
+      PC Computer - Hollow Knight - Troupe Master Grimm_12: 2073961383
+      PC Computer - Hollow Knight - Troupe Master Grimm_13: 1775083852
+      PC Computer - Hollow Knight - Troupe Master Grimm_14: 1904281904
+      PC Computer - Hollow Knight - Troupe Master Grimm_15: 1228226457
+      PC Computer - Hollow Knight - Troupe Master Grimm_16: -972109729
+      PC Computer - Hollow Knight - Troupe Master Grimm_17: 864548261
+      PC Computer - Hollow Knight - Troupe Master Grimm_18: 1974387060
+      PC Computer - Hollow Knight - Troupe Master Grimm_19: 1586690599
+      PC Computer - Hollow Knight - Troupe Master Grimm_2: 2141929844
+      PC Computer - Hollow Knight - Troupe Master Grimm_20: -1412469441
+      PC Computer - Hollow Knight - Troupe Master Grimm_21: -1017555645
+      PC Computer - Hollow Knight - Troupe Master Grimm_22: 1165581090
+      PC Computer - Hollow Knight - Troupe Master Grimm_23: 464329192
+      PC Computer - Hollow Knight - Troupe Master Grimm_24: 586775270
+      PC Computer - Hollow Knight - Troupe Master Grimm_25: 2110374325
+      PC Computer - Hollow Knight - Troupe Master Grimm_26: -1738207424
+      PC Computer - Hollow Knight - Troupe Master Grimm_27: 1587149819
+      PC Computer - Hollow Knight - Troupe Master Grimm_28: -13335651
+      PC Computer - Hollow Knight - Troupe Master Grimm_29: 1174017244
+      PC Computer - Hollow Knight - Troupe Master Grimm_3: -957064511
+      PC Computer - Hollow Knight - Troupe Master Grimm_30: -541075755
+      PC Computer - Hollow Knight - Troupe Master Grimm_31: -30733636
+      PC Computer - Hollow Knight - Troupe Master Grimm_4: -1785495849
+      PC Computer - Hollow Knight - Troupe Master Grimm_5: -322901258
+      PC Computer - Hollow Knight - Troupe Master Grimm_6: 1954534457
+      PC Computer - Hollow Knight - Troupe Master Grimm_7: -1947404194
+      PC Computer - Hollow Knight - Troupe Master Grimm_8: 255654587
+      PC Computer - Hollow Knight - Troupe Master Grimm_9: 7099459
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
