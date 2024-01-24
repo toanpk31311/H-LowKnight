@@ -49,9 +49,11 @@ public class SwordSkillController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public void SetUpSword(Vector2 _dir, float _gravityScale, Player _player)
+    public void SetUpSword(Vector2 _dir, float _gravityScale, Player _player, float _freezeTimeDuration, float _returnSpeed)
     {
         player = _player;
+        freezeTimeDuration = _freezeTimeDuration;
+        returnSpeed= _returnSpeed;
         rb.velocity = _dir;
         rb.gravityScale = _gravityScale;
         if (pierceAmount <= 0)
@@ -123,7 +125,7 @@ public class SwordSkillController : MonoBehaviour
                     foreach (var hit in colliders)
                     {
                         if (hit.GetComponent<GroundOnlyEnemy>() != null)
-                            hit.GetComponent<GroundOnlyEnemy>().Damage();  ;
+                           SwordSkillDamage(hit.GetComponent<GroundOnlyEnemy>());
                         
                     }
                 }
@@ -137,9 +139,10 @@ public class SwordSkillController : MonoBehaviour
 
             transform.position = Vector2.MoveTowards(transform.position, enemyTarget[targetIndex].position, bounceSpeed * Time.deltaTime);
             if (Vector2.Distance(transform.position, enemyTarget[targetIndex].position) < .1f)
-            {   
-                enemyTarget[targetIndex].GetComponent<GroundOnlyEnemy>().Damage();
-                targetIndex++;
+            {
+                SwordSkillDamage(enemyTarget[targetIndex].GetComponent<GroundOnlyEnemy>());
+                
+               targetIndex++;
                 bounceAmount--;
                 if (bounceAmount <= 0)
                 {
@@ -158,15 +161,29 @@ public class SwordSkillController : MonoBehaviour
 
         if (isReturning)
             return;
+
+
+        if (collision.GetComponent<GroundOnlyEnemy>() != null)
+        {
+            GroundOnlyEnemy enemy = collision.GetComponent<GroundOnlyEnemy>();
+            SwordSkillDamage(enemy);
+        }
         SetupTargetsForBounce(collision);
-        StuckInto(collision);
+            StuckInto(collision);
 
     }
-    public void SetupBounce(bool _isBouncing, int _amountOfBounces)
+
+    private void SwordSkillDamage(GroundOnlyEnemy enemy)
+    {
+        enemy.Damage();
+        enemy.StartCoroutine("FreezeTimerCoroutine", freezeTimeDuration);
+    }
+
+    public void SetupBounce(bool _isBouncing, int _amountOfBounces,float _bounceSpeed)
     {
         isBouncing = _isBouncing;
         bounceAmount = _amountOfBounces;
-        //bounceSpeed = _bounceSpeed;
+        bounceSpeed = _bounceSpeed;
 
 
         enemyTarget = new List<Transform>();

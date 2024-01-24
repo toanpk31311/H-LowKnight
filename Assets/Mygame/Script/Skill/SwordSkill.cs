@@ -59,7 +59,7 @@ public class SwordSkill : Skill
 
         if (swordType == SwordType.Bounce)
         {           
-            newSwordScript.SetupBounce(true, bounceAmount);   
+            newSwordScript.SetupBounce(true, bounceAmount,bounceSpeed);   
         }
         else if (swordType == SwordType.Pierce)
         {
@@ -69,7 +69,7 @@ public class SwordSkill : Skill
         else if (swordType == SwordType.Spin)
             newSwordScript.SetupSpin(true, maxTravelDistance, spinDuration, hitCooldown);
 
-        newSwordScript.SetUpSword(finalDr, swordGravity, player);
+        newSwordScript.SetUpSword(finalDr, swordGravity, player,freezeTimeDuration,returnSpeed);
 
         player.AssignNewSword(newSword);
         DotsActive(false);

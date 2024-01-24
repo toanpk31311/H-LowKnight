@@ -35,7 +35,7 @@ public class GroundOnlyEnemy : Entity
     {
         base.Awake();
         stateMachine = new EnemyStateMachine();
-
+        defaultMoveSpeed = moveSpeed;
         
     }
     protected override void Update()
@@ -76,5 +76,28 @@ public class GroundOnlyEnemy : Entity
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDr, transform.position.y));
     }
-    
+    public virtual void FreezeTime(bool _timeFrozen)
+    {
+        if (_timeFrozen)
+        {
+            moveSpeed = 0;
+            anim.speed = 0;
+        }
+        else
+        {
+            moveSpeed = defaultMoveSpeed;
+            anim.speed = 1;
+        }
+    }
+    public virtual void FreezeTimeFor(float _duration) => StartCoroutine(FreezeTimerCoroutine(_duration));
+
+    protected virtual IEnumerator FreezeTimerCoroutine(float _seconds)
+    {
+        FreezeTime(true);
+
+        yield return new WaitForSeconds(_seconds);
+
+        FreezeTime(false);
+    }
+
 }
