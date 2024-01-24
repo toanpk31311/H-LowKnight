@@ -12,6 +12,14 @@ public class SwordSkill : Skill
     //[SerializeField] private UI_SkillTreeSlot pierceUnlockButton;
     [SerializeField] private int   pierceAmount;
     [SerializeField] private float pierceGravity;
+    [Header("Spin info")]
+    //[SerializeField] private UI_SkillTreeSlot spinUnlockButton;
+    [SerializeField] private float hitCooldown = .35f;
+    [SerializeField] private float maxTravelDistance = 7;
+    [SerializeField] private float spinDuration = 2;
+    [SerializeField] private float spinGravity = 1;
+
+
     [Header("Skill info")]
 
     [SerializeField] private GameObject swordPrefab;
@@ -42,6 +50,7 @@ public class SwordSkill : Skill
 
         GenerateDots();
     }
+
     public void CreateSword()
     { 
         
@@ -56,7 +65,12 @@ public class SwordSkill : Skill
         {
             newSwordScript.SetupPierce(pierceAmount);
         }
-            newSwordScript.SetUpSword(finalDr, swordGravity, player);
+
+        else if (swordType == SwordType.Spin)
+            newSwordScript.SetupSpin(true, maxTravelDistance, spinDuration, hitCooldown);
+
+        newSwordScript.SetUpSword(finalDr, swordGravity, player);
+
         player.AssignNewSword(newSword);
         DotsActive(false);
     }
@@ -66,9 +80,10 @@ public class SwordSkill : Skill
             swordGravity = bounceGravity;
         else if (swordType == SwordType.Pierce)
             swordGravity = pierceGravity;
-        //else if (swordType == SwordType.Spin) 
-            //swordGravity = spinGravity;
+        else if (swordType == SwordType.Spin)
+            swordGravity = spinGravity;
     }
+
     protected override void Update()
     {
         if (Input.GetKeyUp(KeyCode.R))
