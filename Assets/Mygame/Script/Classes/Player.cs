@@ -38,6 +38,7 @@ public class Player : Entity
     public SkillManager Skill {  get; private set; }
     public PlayerAimState AimState { get; private set; }
     public PlayerCatchSwordState catchSword { get; private set; }
+    public BlackHoleState blackHoleState { get; private set; }
     public GameObject sword;
     //{ get; private set; }
     #endregion
@@ -55,6 +56,7 @@ public class Player : Entity
         CounterAttack = new PlayerCounterAttack(this, StateMachine, "CounterAttack");
         AimState = new PlayerAimState(this, StateMachine, "AimSword");
         catchSword= new PlayerCatchSwordState(this, StateMachine, "CatchSword");
+        blackHoleState = new BlackHoleState(this, StateMachine, "jump");
     }
     protected override void Start()
     {
@@ -68,7 +70,10 @@ public class Player : Entity
         StateMachine.curentState.Update();
         CheckForDashInput();
     }
-  
+   public void ExitBlackHoleState()
+    {
+        StateMachine.ChangeState(PlayerAirState);
+    }
     private void CheckForDashInput()
     {   
         //usedashTimer-= Time.deltaTime;

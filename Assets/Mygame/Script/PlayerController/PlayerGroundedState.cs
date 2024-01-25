@@ -38,6 +38,9 @@ public class PlayerGroundedState : PlayerState
         if (Input.GetKeyDown(KeyCode.R)&&HasNoSword())
            
             stateMachine.ChangeState(player.AimState);
+        if (Input.GetKeyDown(KeyCode.F)){
+            stateMachine.ChangeState(player.blackHoleState);
+        }
     }
     private bool HasNoSword()
     {

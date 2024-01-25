@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
     public Animator anim { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public EntityFx fx { get; private set; }
+    public SpriteRenderer sr { get; private set; }
 
 
     [Header("colision infor")]
@@ -33,7 +34,7 @@ public class Entity : MonoBehaviour
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       
+        sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         fx=GetComponent<EntityFx>();
     }
@@ -94,5 +95,11 @@ public class Entity : MonoBehaviour
         rb.velocity= new Vector2 (knockbackDirection.x*-facingDr, knockbackDirection.y);
         yield return new WaitForSeconds(knockbackDuration);
         isKnocked=false;
+    }
+    public void MakeTransprent(bool _transprent)
+    {
+        if(_transprent)
+            sr.color = Color.clear;
+        else sr.color = Color.white;
     }
 }
