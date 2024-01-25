@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CloneSkillController : MonoBehaviour
 {
@@ -25,10 +27,13 @@ public class CloneSkillController : MonoBehaviour
     {
         if(_canAttack)
         {
-            anim.SetInteger("AttackNumber", Random.Range(1,3));
+            anim.SetInteger("AttackNumber", Random.Range(1, 3));
+
         }
         transform.position = _newTranForm.position+_offset;
         cloneTimer = _cloneDuration;
+
+        FaceClosestTarget();
     }
 
 
@@ -60,4 +65,29 @@ public class CloneSkillController : MonoBehaviour
         }
 
     }
+    private void FaceClosestTarget()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 25);
+        float closestDistance = Mathf.Infinity;
+        foreach(var hit in colliders)
+        {
+            if(hit.GetComponent<GroundOnlyEnemy>() != null)
+            {
+                float distanceToEnemy =Vector2.Distance(transform.position,hit.transform.position);
+                if (distanceToEnemy < closestDistance)
+                {
+                    closestDistance = distanceToEnemy;
+                    closestEnemy = hit.transform;
+                }
+            }
+        }
+       
+        if(closestEnemy != null)
+        {
+            if (transform.position.x>closestEnemy.position.x)
+            {
+                transform.Rotate(0, 180,0);
+            }
+        }
+     }
 }
