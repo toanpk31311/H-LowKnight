@@ -74,6 +74,10 @@ public class Player : Entity
     {
         StateMachine.ChangeState(PlayerAirState);
     }
+
+
+
+
     private void CheckForDashInput()
     {   
         //usedashTimer-= Time.deltaTime;

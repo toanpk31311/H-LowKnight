@@ -27,7 +27,7 @@ public class BlackHoleSkill : Skill
 
         currentBlackhole = newBlackHole.GetComponent<BlackHollController>();
 
-        currentBlackhole.SetupBlackhole(maxSize, growSpeed, shrinkSpeed, amountOfAttacks, cloneCooldown/*, blackholeDuration*/);
+        currentBlackhole.SetupBlackhole(maxSize, growSpeed, shrinkSpeed, amountOfAttacks, cloneCooldown, blackholeDuration);
     }
 
     protected override void Start()
@@ -38,5 +38,18 @@ public class BlackHoleSkill : Skill
     protected override void Update()
     {
         base.Update();
+    }
+    public bool SkillCompleted()
+    {   
+        if(!currentBlackhole)
+        {
+            return false;
+        }
+        if (currentBlackhole.playerCanExitState==true)
+        {   
+            currentBlackhole= null;
+            return true;
+        }
+        return false;
     }
 }
