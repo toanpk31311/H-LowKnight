@@ -6,6 +6,9 @@ public class BlackBugWalkState : State
 
     protected BlackBugEnemy blackBugEnemy;
 
+    private float walkAnimTime;
+
+
     public BlackBugWalkState(Entities _entitiesBase, StateMachine _stateMachine, string _animBoolName, BlackBugEnemy blackBugEnemy) : base(_entitiesBase, _stateMachine, _animBoolName)
     {
         this.blackBugEnemy = blackBugEnemy;
@@ -13,7 +16,9 @@ public class BlackBugWalkState : State
 
     public override void Enter()
     {
-        base.Enter();        
+        base.Enter();
+        
+        walkAnimTime = blackBugEnemy.walkClip.length;
     }
 
     public override void Exit()
@@ -24,9 +29,11 @@ public class BlackBugWalkState : State
     public override void Update()
     {
         base.Update();
+
+        walkAnimTime -= Time.deltaTime;
         blackBugEnemy.SetVelocity(blackBugEnemy.moveSpeed * blackBugEnemy.facingDirection, 0);
 
-        if (blackBugEnemy.IsWallDetected() || !blackBugEnemy.IsGroundDetected()) 
+        if ((blackBugEnemy.IsWallDetected() || !blackBugEnemy.IsGroundDetected()) && walkAnimTime < 0)
         {
             stateMachine.ChangeState(blackBugEnemy.turnState);
         }

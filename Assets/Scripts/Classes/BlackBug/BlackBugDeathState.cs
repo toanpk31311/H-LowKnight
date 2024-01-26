@@ -16,7 +16,7 @@ public class BlackBugDeathState : State
     public override void Enter()
     {
         base.Enter();
-        
+
         blackBugEnemy.SetVelocity(0, 0);
         deathAnimTime = blackBugEnemy.deathClip.length;
     }
@@ -26,8 +26,8 @@ public class BlackBugDeathState : State
         base.Exit();
 
         blackBugEnemy.animator.gameObject.SetActive(false);
+        blackBugEnemy.GetCollider().enabled = false;
         blackBugEnemy.SetDeathSprite(true);
-        // TODO: Turn off collider
     }
 
     public override void Update()

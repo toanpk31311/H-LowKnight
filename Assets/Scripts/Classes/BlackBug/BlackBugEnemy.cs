@@ -4,6 +4,8 @@ public class BlackBugEnemy : GroundEnemy
 {
 
 
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D;
+
     #region States
     public BlackBugWalkState walkState { get; private set; }
     public BlackBugTurnState turnState { get; private set; }
@@ -12,6 +14,8 @@ public class BlackBugEnemy : GroundEnemy
 
     public AnimationClip turnClip { get; private set; }
     public AnimationClip deathClip { get; private set; }
+    public AnimationClip walkClip { get; private set; }
+
 
     protected override void Awake()
     {
@@ -23,6 +27,7 @@ public class BlackBugEnemy : GroundEnemy
 
         turnClip = FindAnimation("Turn");
         deathClip = FindAnimation("Death");
+        walkClip = FindAnimation("Walk");
     }
 
     protected override void Start()
@@ -34,6 +39,11 @@ public class BlackBugEnemy : GroundEnemy
     protected override void Update()
     {
         base.Update();
+    }
+
+    public CapsuleCollider2D GetCollider()
+    {
+        return capsuleCollider2D;
     }
 
 
