@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Trap_Spike
+  - Platform
   layers:
   - Default
   - TransparentFX

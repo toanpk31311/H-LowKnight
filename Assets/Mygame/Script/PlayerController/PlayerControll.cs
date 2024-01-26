@@ -89,5 +89,4 @@ public class PlayerControll : Entity
         isBusy = false;
     }
 
-
 }
